@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Donate - Donate Books</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/donate.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo-container">
+                    <img src="new logo.jpg" alt="Book Exchange Platform Logo" class="logo">
+                    <h1>Book Donate</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-actions">
+                    <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+                    <div class="user-menu" id="userMenu" style="display: none;">
+                        <span class="username" id="username">User</span>
+                        <button onclick="logout()" class="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="main.html" class="nav-link">
+                    <i class="nav-icon">🏠</i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="buy.html" class="nav-link">
+                    <i class="nav-icon">📚</i>
+                    <span>Buy</span>
+                </a></li>
+                <li><a href="sell.html" class="nav-link">
+                    <i class="nav-icon">💰</i>
+                    <span>Sell</span>
+                </a></li>
+                <li><a href="exchange.html" class="nav-link">
+                    <i class="nav-icon">🔄</i>
+                    <span>Exchange</span>
+                </a></li>
+                <li><a href="donate.html" class="nav-link">
+                    <i class="nav-icon">🎁</i>
+                    <span>Donate</span>
+                </a></li>
+                <li><a href="reviews.html" class="nav-link">
+                    <i class="nav-icon">⭐</i>
+                    <span>Reviews</span>
+                </a></li>
+                <li><a href="chat.html" class="nav-link">
+                    <i class="nav-icon">💬</i>
+                    <span>Chat</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+<body>
+    <div class="container">
+        <div id="book-list">
+            <!-- Books will be listed here -->
+        </div>
+        <div class="add-book-form">
+            <h2>Add a Book to Donate</h2>
+            <input type="text" id="book-title-input" placeholder="Book Title">
+            <input type="text" id="book-author-input" placeholder="Author">
+            <button onclick="addBook()">Add Book</button>
+        </div>
+        <div id="donation-form" class="donation-form" style="display:none;">
+            <h2>Donate <span id="selected-book-title"></span></h2>
+            <select id="donation-option">
+                <option value="">Select Donation Option</option>
+                <option value="library">Library</option>
+                <option value="ngo">NGO</option>
+                <option value="others">Others</option>
+            </select>
+            <button onclick="confirmDonation()">Confirm Donation</button>
+        </div>
+    </div>
+    <script src="script/donate.js"></script>
+</body>
+</html>

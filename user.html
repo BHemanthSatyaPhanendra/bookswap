@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/user.css">
+    <title>BookSwap Hub</title>
+</head>
+<body>
+    <button class="menu-button" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="user.html"><i class="nav-icon">🏠</i> Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="buy.html">Buy Books</a></li>
+            <li><a href="exchange.html">Exchange Books</a></li>
+            <li><a href="donate.html">Donate Books</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="chat.html">Chat</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo-container">
+                    <img src="images/new logo.jpg" alt="Book Exchange Platform Logo" class="logo">
+                    <h1>Book Exchange Platform</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-actions">
+                    <div class="user-menu" id="userMenu">
+                        <span class="username" id="displayUsername"></span>
+                        <button onclick="window.location.href='logout.php'" class="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="user.html" class="nav-link">
+                    <i class="nav-icon">🏠</i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="buy.html" class="nav-link">
+                    <i class="nav-icon">📚</i>
+                    <span>Buy</span>
+                </a></li>
+                <li><a href="exchange.html" class="nav-link">
+                    <i class="nav-icon">🔄</i>
+                    <span>Exchange</span>
+                </a></li>
+                <li><a href="donate.html" class="nav-link">
+                    <i class="nav-icon">🎁</i>
+                    <span>Donate</span>
+                </a></li>
+                <li><a href="reviews.html" class="nav-link">
+                    <i class="nav-icon">⭐</i>
+                    <span>Reviews</span>
+                </a></li>
+                <li><a href="chat.html" class="nav-link">
+                    <i class="nav-icon">💬</i>
+                    <span>Chat</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Welcome to the Book Exchange Platform</h2>
+            <p>Buy, sell, exchange, or donate your books!</p>
+        </section>
+
+        <!-- Books for Sale -->
+        <section class="book-section">
+            <div class="section-header">
+                <h2>Books for Sale</h2>
+                <a href="buy.html" class="view-all">View All</a> 
+            </div>
+            <div class="book-grid" id="saleBooks">
+                <!-- Books will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Books for Exchange -->
+        <section class="book-section">
+            <div class="section-header">
+                <h2>Books for Exchange</h2>
+                <a href="exchange.html" class="view-all">View All</a>
+            </div>
+            <div class="book-grid" id="exchangeBooks">
+                <!-- Books will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Books for Donation -->
+        <section class="book-section">
+            <div class="section-header">
+                <h2>Books for Donation</h2>
+                <a href="donate.html" class="view-all">View All</a>
+            </div>
+            <div class="book-grid" id="donationBooks">
+                <!-- Books will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Book Exchange Platform</p>
+    </footer>
+
+    <script src="script/user.js"></script>
+</body>
+</html>

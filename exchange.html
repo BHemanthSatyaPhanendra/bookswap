@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Exchange - Exchange Books</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/exchange.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo-container">
+                    <img src="new logo.jpg" alt="Book Exchange Platform Logo" class="logo">
+                    <h1>Book Exchange</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-actions">
+                    <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+                    <div class="user-menu" id="userMenu" style="display: none;">
+                        <span class="username" id="username">User</span>
+                        <button onclick="logout()" class="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="buy.html" class="nav-link">
+                    <i class="nav-icon">📚</i>
+                    <span>Buy</span>
+                </a></li>
+                <li><a href="main.html" class="nav-link">
+                    <i class="nav-icon">🏠</i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="sell.html" class="nav-link">
+                    <i class="nav-icon">💰</i>
+                    <span>Sell</span>
+                </a></li>
+                <li><a href="exchange.html" class="nav-link">
+                    <i class="nav-icon">🔄</i>
+                    <span>Exchange</span>
+                </a></li>
+                <li><a href="donate.html" class="nav-link">
+                    <i class="nav-icon">🎁</i>
+                    <span>Donate</span>
+                </a></li>
+                <li><a href="reviews.html" class="nav-link">
+                    <i class="nav-icon">⭐</i>
+                    <span>Reviews</span>
+                </a></li>
+                <li><a href="chat.html" class="nav-link">
+                    <i class="nav-icon">💬</i>
+                    <span>Chat</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <button class="add-book-button" id="addBookBtn">+ Add Book for Exchange</button>
+
+        <section class="add-book-section" id="addBookSection">
+            <h2>List Your Book for Exchange</h2>
+            <form id="exchangeBookForm">
+                <div class="form-group">
+                    <label for="bookTitle">Book Title</label>
+                    <input type="text" id="bookTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="condition">Book Condition</label>
+                    <select id="condition" required>
+                        <option value="">Select Condition</option>
+                        <option value="New">New</option>
+                        <option value="Like New">Like New</option>
+                        <option value="Very Good">Very Good</option>
+                        <option value="Good">Good</option>
+                        <option value="Fair">Fair</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exchangePreference">Preferred Books for Exchange</label>
+                    <textarea id="exchangePreference" rows="4" placeholder="List the types of books or specific titles you're interested in..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="bookImage">Book Image</label>
+                    <input type="file" id="bookImage" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="add-book-button">List for Exchange</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="available-books">
+            <h2>Available Books for Exchange</h2>
+            <div class="filters">
+                <input type="text" id="searchBooks" placeholder="Search books...">
+                <select id="conditionFilter">
+                    <option value="">All Conditions</option>
+                    <option value="New">New</option>
+                    <option value="Like New">Like New</option>
+                    <option value="Very Good">Very Good</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                </select>
+            </div>
+            <div class="book-container" id="bookContainer">
+                <!-- Books will be loaded here dynamically -->
+            </div>
+        </section>
+
+        <section class="exchange-matches" id="exchangeMatches">
+            <h2>Potential Exchange Matches</h2>
+            <!-- Matches will be loaded here dynamically -->
+        </section>
+    </main>
+    <script src="script/exchange.js"></script>
+</body>
+</html>

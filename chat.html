@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chat.css">
+    <title>Book Exchange Chat</title>
+</head>
+<body>
+    <header>
+        <h1>Book Exchange Chat</h1>
+    </header>
+
+    <main class="chat-container">
+        <!-- Chat List Sidebar -->
+        <aside class="chat-list">
+            <div class="chat-search">
+                <input type="text" id="chatSearch" placeholder="Search conversations...">
+            </div>
+            <div id="chatsList">
+                <!-- Chat conversations will be listed here -->
+            </div>
+        </aside>
+
+        <!-- Chat Window -->
+        <section class="chat-window">
+            <div class="chat-header" id="chatHeader">
+                <h2>Select a conversation</h2>
+            </div>
+
+            <div class="messages" id="messages">
+                <!-- Messages will appear here -->
+            </div>
+
+            <div class="chat-input">
+                <form id="messageForm" onsubmit="sendMessage(event)">
+                    <input type="text" id="messageInput" placeholder="Type your message..." disabled>
+                    <button type="submit" disabled>Send</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Exchange Details Sidebar -->
+        <aside class="exchange-details">
+            <div id="exchangeInfo">
+                <!-- Exchange details will appear here -->
+            </div>
+        </aside>
+    </main>
+    <script src="script/chat.js"></script>
+</body>
+</html> 
